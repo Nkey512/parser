@@ -153,14 +153,3 @@ def form_ast(token_list):
             cur_node = cur_node.Children[1]
 
     return ast_tree
-
-
-lst = [
-    ['скобка', '('], ['скобка', '('], ['скобка', '('], ['число', '7'], ['операция', '+'],
-    ['число', '3'], ['скобка', ')'], ['операция', '*'], ['скобка', '('], ['число', '5'],
-    ['операция', '-'], ['число', '2'], ['скобка', ')'], ['скобка', ')'], ['скобка', ')']
-]
-c = form_ast(lst)
-nodes = c.GetAllNodes()
-values = list(map(lambda x: x.NodeValue, nodes))
-print(values)
